@@ -170,10 +170,13 @@ img {
 }
 nav {
   display: flex;
-  justify-content: space-between;
-  width: 50%;
+  justify-content: space-evenly;
 }
-nav a {
+nav .links {
+  justify-content: space-between;
+}
+nav .links a {
+  justify-content: space-between;
   text-decoration: none;
   color: black;
 }
