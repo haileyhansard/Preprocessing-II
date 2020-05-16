@@ -1,21 +1,65 @@
-.home {
+ html{
+   font-size: 62.5%; //is this correct placement and curly brackets for this property?
+  
 
-  .content-section {
-    margin: 30px 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+  header{
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto; 
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    padding-bottom:1%;
+    border-bottom: dashed 1px black;
 
-   
+    @media @phone{
+      padding: 0 2%;
+    }
+
+    h2{
+      padding: 1%;
+    }
+
+    p{
+      padding:1%;
+    }
+  }
+  
+  .container-home{
+    max-width:800px;
+    width:100%;
+    margin:0 auto;
+
+
+    .content-section {
+      margin: 30px 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
     
+      @media @phone {
+        flex-wrap:none;
+        flex-direction:column;
+        justify-items: center;
+        padding: 0 2%;
+      }
+
     .text-content {
       width: 48%;
       padding-right: 1%;
+
+      @media @phone {
+          width:100%;
+      }
     }
 
     .img-content {
       width: 48%;
-      padding-left: 1%;
+
+      @media @phone {
+        width:100%;
+        padding: 0;
+      }
 
       img {
         border-radius: 10px;
@@ -26,6 +70,11 @@
   .inverse-content {
     padding-bottom: 30px;
     border-bottom: 2px dashed @navigation-border;
+    
+    @media @phone {
+      flex-direction: column-reverse;
+      align-items: center;
+    }
 
     .text-content {
       padding-left: 1%;
@@ -42,6 +91,15 @@
     width: 75%;
     margin: 0 auto 30px;
 
+    @media @phone{
+      padding: 1% 2%;
+      width:97%;
+    
+    h2{
+      width:100%;
+    }
+    }
+
     img {
       border-radius: 10px;
     }
@@ -52,10 +110,26 @@
     border-top: 2px dashed @navigation-border;
     display: flex;
     justify-content: space-between;
+  
+      @media @phone{
+      flex-direction: column;
+      justify-content: center;
+      padding:2% 10%;
+      }
 
     .destination {
       width: 30%;
       margin-bottom: 30px;
+      .btn{
+      .btn-class(teal, snow, 1.6rem, 80%);
+      @media @phone{
+        width: 98%;
+      }
+      }
+      @media @phone{
+        width: 98%;
+      }
     }
-  }
-}// home
+  } 
+}  
+}
